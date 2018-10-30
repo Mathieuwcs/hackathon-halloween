@@ -11,6 +11,11 @@ export class ApiService {
 
   bonbonsDex: Bonbon[] = [];
 
+  tableauSucettes: Bonbon[] = [];
+  tableauMarshmallows: Bonbon[] = [];
+  tableauBonbonsGelifies: Bonbon[] = [];
+  tableauMeringuesFantaisie: Bonbon[] = [];
+
   getBonbonsDex() {
     return this.bonbonsDex;
   }
@@ -23,6 +28,16 @@ export class ApiService {
       for (let i = 0; i < obj.length; i++) {
         const unBonbon = new Bonbon(obj[i].product_name_fr, category );
         this.bonbonsDex.push(unBonbon);
+        switch (category) {
+          case 'sucettes':
+            this.tableauSucettes.push(unBonbon);
+          case 'marshmallows':
+            this.tableauMarshmallows.push(unBonbon);
+          case 'bonbons-gelifies':
+            this.tableauBonbonsGelifies.push(unBonbon);
+          case 'meringues-fantaisie':
+            this.tableauMeringuesFantaisie.push(unBonbon);
+        }   
       }
       while (this.bonbonsDex.length > 20) {
         this.bonbonsDex.splice(Math.floor(Math.random() * this.bonbonsDex.length), 1);

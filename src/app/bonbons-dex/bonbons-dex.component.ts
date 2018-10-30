@@ -14,14 +14,15 @@ export class BonbonsDexComponent implements OnInit {
     private service: ApiService
   ) { }
 
-  tableauSucettes: Bonbon[];
-  tableauMarshmallows: Bonbon[];
-  tableauBonbonsGelifies: Bonbon[];
-  tableauMeringuesFantaisie: Bonbon[];
+  tableauSucettes: Bonbon[] = [];
+  // tableauMarshmallows: Bonbon[];
+  // tableauBonbonsGelifies: Bonbon[];
+  // tableauMeringuesFantaisie: Bonbon[];
 
   bonbonsDex: Bonbon[] = [];
 
   ngOnInit() {
     this.bonbonsDex = this.service.getBonbonsDex();
+    this.tableauSucettes = this.service.tableauSucettes;
   }
 }

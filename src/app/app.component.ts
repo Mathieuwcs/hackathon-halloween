@@ -14,13 +14,6 @@ export class AppComponent implements OnInit {
     private service: ApiService
   ) { }
 
-  // tableauSucettes: Bonbon[];
-  // // tableauBonbonsAuMiel: Bonbon[];
-  // tableauMarshmallows: Bonbon[];
-  // tableauBonbonsGelifies: Bonbon[];
-  // tableauMeringuesFantaisie: Bonbon[];
-
-
   ngOnInit() {
     // Remplissage des tableaux de catégories de bonbon
     this.service.getTableauCandy('sucettes');
