@@ -16,11 +16,10 @@ export class ApiService {
   }
 
   getTableauCandy(category): void {
-    // this.http.get<any>(`https://fr.openfoodfacts.org/categorie/sucettes/${Math.floor((Math.random() * 3) + 1)}.json`)
     this.http.get<any>(`https://fr.openfoodfacts.org/categorie/${category}/1.json`)
     .subscribe((data) => {
       const obj = data.products;
-      // Boucle pour instancier les quatre premiers objet du JSON en classe Bonbon
+      // Boucle pour instancier les cinq premiers objet du JSON en classe Bonbon
       for (let i = 0; i < 5; i++) {
         const unBonbon = new Bonbon(obj[i].product_name_fr, category );
         this.bonbonsDex.push(unBonbon);
