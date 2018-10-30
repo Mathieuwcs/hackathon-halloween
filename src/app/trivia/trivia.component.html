@@ -1,21 +1,75 @@
-<ng-container *ngFor="let trivia of trivias ">
 
-  <div [innerHtml]="trivia.question"></div>
-  <form>
-  <ul>
-    <td><input type="radio" value="correct_answer" name="list_name" >{{trivia.correct_answer}}</td><tr>
-    <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivia.incorrect_answers0 }}</td><tr>
-    <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivia.incorrect_answers1 }}</td><tr>
-    <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivia.incorrect_answers2 }}</td><tr>
-  </ul>
+  <div class="general">
+    <div class="logo-trivia">
+      <img src="./assets/logo.png" alt="logo" width="200px" height="140ypx">
+    </div>
+    <div class="bloc-trivia">
+      <div class="bar-info-perso">
+        <table>
+          <tr>
+            <td>
+              <div class="toto-bonbons">
+                Total Bonbons :
+              </div>
+            </td>
+            <td>
+              <div class="address-trivia">
+                Adresse :
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-  <p>
-    <button (click)="giveAnswer(value)">Answer !</button>
-  </p>
-</form>
-</ng-container>
-<div>{{timer}}</div>
+      <div class="conv-habitant">
+        <table>
+          <tr>
+          <td>
+            <div class="conv-h-bloc-img">
+              ICON HABITANT ICI.
+            </div>
+          </td>
+          <td>
+            <div class="conv-h-bloc-txt">
+                <p class="txt-habitant">Nom Habitant</p>
+                
 
+                  <div [innerHtml]="trivias[0].question"></div>
 
+            </div>
+          </td>
+          </tr>
+        </table>
+      </div>
 
+      <div class="conv-joueur">
+        <table>
+          <tr>
+          <td>
+          <div class="conv-j-bloc-txt">
+              <p class="txt-joueur">Nom Joueur</p>
+              <form>
+                <ul>
+                  <td><input type="radio" value="correct_answer" name="list_name" >{{trivias[0].correct_answer}}</td><tr>
+                  <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers0 }}</td><tr>
+                  <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers1 }}</td><tr>
+                  <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers2 }}</td><tr>
+                </ul>
+              
+                <p>
+                  <button (click)="giveAnswer(value)">Answer !</button>
+                </p>
+              </form>
+          </div>
+          </td>
+          <td>
+            <div class="conv-j-bloc-img">
+              ICON HABITANT ICI.
+            </div>
+          </td>
+          </tr>
+        </table>
+      </div>
 
+    </div>
+  </div>
