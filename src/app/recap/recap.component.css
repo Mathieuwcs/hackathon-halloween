@@ -1,26 +1,32 @@
+.general {
+  background: black;
+  display: block;
+  height:100vh;
+}
+
+
 .homepage {
     background-color: black;
-    background-image: url('../../assets/fond-deux.png');
+    background-image: url('../../assets/fondgeneral.png');
     padding:10px;
     width:100%;
     height:100vh;
     background-size:100%;
     background-repeat: no-repeat;
-    object-fit:cover;
   }
-  
-  .bloc-intro-home {
-    width:50%;
-    height:auto;
+
+  .bloc-recap {
+    width:500px;
+    height:470px;
     padding: 30px;
-    margin: 0 auto;
+    margin: 30px auto;
     font-size:14px;
-    line-height: 1.2em;
+    line-height: 1em;
     text-align: center;
     color:black;
     text-shadow: 0 0 10px #000;
     background: white;
-    opacity:0.7;
+    opacity:0.9;
     border-radius:5px;
     box-shadow:3px 3px 0px black;
   }

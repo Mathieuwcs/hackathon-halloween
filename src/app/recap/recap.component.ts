@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Bonbon } from '../bonbon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recap',
@@ -8,7 +9,7 @@ import { Bonbon } from '../bonbon';
 })
 export class RecapComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
