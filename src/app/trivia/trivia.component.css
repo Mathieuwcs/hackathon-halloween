@@ -1,0 +1,149 @@
+.general {
+  background: black;
+  display: block;
+  height:100vh;
+}
+
+.bloc-trivia {
+  background: grey;
+  width:900px;
+  height:500px;
+  margin:auto;
+  background-image: url('../../assets/fondtrivia.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+
+}
+
+.logo-trivia {
+  margin:auto;
+  padding-top:40px;
+  margin-bottom:-40px;
+  display: block;
+  display:flex;
+  justify-content: center;
+}
+
+/* Barre infos persos + nbr bonbons */
+.bar-info-perso {
+  background: #424242;
+  color:white;
+  padding:10px;
+  font-weight: 600;
+  font-size:0.8em;
+  text-shadow:1px 1px 0px black;
+  display: block;
+  line-height:1em;
+  height:35px;
+}
+
+/* Apparence texte nbr total bonbons */
+.toto-bonbons {
+  text-align: right;
+  font-family: 'Gentium Basic', serif;
+  display:block;
+  width:200px;
+}
+
+/* Apparence texte adresse */
+.address-trivia {
+  text-align: right;
+  font-family: 'Gentium Basic', serif;
+  display: block;
+  width:600px;
+}
+
+/* PAGE TRIVIA : CONV HABITANT */
+.conv-habitant {
+  display: inline-block;
+  background-color: #391226;
+  box-shadow: 3px 3px 0px black;
+  padding:5px;
+  padding-left:30px;
+  margin-top: 70px;
+}
+
+.conv-h-bloc-txt {
+  font-family: 'Gentium Basic', serif;
+  background: white;
+  padding:5px;
+  width:400px;
+  height: 90px;
+  color:black;
+  font-size:0.9em;
+  line-height: 1em;
+  border-radius: 10px;
+  margin:5px;
+}
+
+.conv-h-bloc-img {
+  background: black;
+  padding:5px;
+  width:100px;
+  height:100px;
+  border-radius: 100%;
+}
+
+.txt-habitant {
+  font-family: 'Fontdiner Swanky', cursive;
+  background: #73294E;
+  color:white;
+  padding:5px;
+  text-shadow: 1px 1px 0px black;
+  display: block;
+  width:200px;
+  border-radius:5px;
+  box-shadow: 2px 2px 0px black;
+  font-size:14px;
+  line-height:1em;
+  margin-bottom:5px;
+}
+
+/* PAGE TRIVIA : CONV JOUEUR */
+.conv-joueur {
+  display: inline-block;
+  background-color: #9B5D00;
+  box-shadow: 3px 3px 0px black;
+  padding:5px;
+  padding-right:40px;
+  margin-top: 130px;
+  margin-left: 340px;
+}
+
+.conv-j-bloc-txt {
+  font-family: 'Gentium Basic', serif;
+  background: white;
+  padding:5px;
+  width:400px;
+  height: 90px;
+  color:black;
+  font-size:0.9em;
+  line-height: 1em;
+  border-radius: 10px;
+  margin:5px;
+}
+
+.txt-joueur {
+  font-family: 'Fontdiner Swanky', cursive;;
+  background: orange;
+  color:black;
+  padding:5px;
+  text-shadow: 1px 1px 0px white;
+  display: block;
+  width:200px;
+  border-radius:5px;
+  box-shadow: 2px 2px 0px black;
+  font-size:14px;
+  line-height:1em;
+  margin-bottom:5px;
+}
+
+.conv-j-bloc-img {
+  background: black;
+  padding:5px;
+  width:100px;
+  height:100px;
+  border-radius: 100%;
+}
