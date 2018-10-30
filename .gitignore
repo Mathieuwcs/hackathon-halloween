@@ -37,3 +37,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+.vs/hackathon-halloween/v15/.suo

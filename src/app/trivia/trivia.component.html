@@ -3,10 +3,10 @@
   <div [innerHtml]="trivia.question"></div>
   <form>
   <ul>
-    <td><input type="radio" value="correct_answer" name="list_name" [innerHtml]=trivia.correct_answer></td><tr>
-    <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivia.incorrect_answers0 }}</td><tr>
-    <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivia.incorrect_answers1 }}</td><tr>
-    <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivia.incorrect_answers2 }}</td><tr>
+    <li><input type="radio" value="correct_answer" name="list_name"><span [innerHtml]="trivia.correct_answer"></span></li>
+    <li><input type="radio" value="incorrect_answers" name="list_name"><span [innerHtml]="trivia.incorrect_answers0"></span></li>
+    <li><input type="radio" value="incorrect_answers" name="list_name"><span [innerHtml]="trivia.incorrect_answers1"></span></li>
+    <li><input type="radio" value="incorrect_answers" name="list_name"><span [innerHtml]="trivia.incorrect_answers2"></span></li>
   </ul>
 
   <p>
