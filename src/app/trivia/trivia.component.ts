@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { TriviaClass } from '../TriviaClass';
+import { Router } from "@angular/router";
+
 
 
 @Component({
@@ -11,12 +13,15 @@ import { TriviaClass } from '../TriviaClass';
 export class TriviaComponent implements OnInit {
 
 trivias:TriviaClass[];
+i = 0;
+timer;
 
 
 
 
   constructor (
     private ApiService: ApiService,
+    private router : Router,
   ) { }
 
   ngOnInit() {
@@ -29,6 +34,7 @@ trivias:TriviaClass[];
     } else {
       console.log("Perdu");
     }
-    }
+    this.router.navigate(['/map'])
   }
-
+  
+}

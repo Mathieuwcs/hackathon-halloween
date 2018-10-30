@@ -6,8 +6,32 @@ import { TriviaClass } from './TriviaClass';
   providedIn: 'root'
 })
 export class ApiService {
+  i=0;
+  timerHours = [
+    "17H00",
+    "17H30",
+    "18H00",
+    "18H30",
+    "19H00",
+    "19H30",
+    "20H00",
+    "21H00",
+    "21H30",
+    "22H00",
+    "22H30",
+    "23H00",
+    "23H30",
+    "00H00"
+  
+  ];
 
   constructor(private http: HttpClient) { }
+
+  getTimer(){
+  this.i++;
+  return this.timerHours[this.i];
+
+}
 
 getTrivia() {
   let trivias: TriviaClass[] = [];
