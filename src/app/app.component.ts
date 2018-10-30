@@ -19,6 +19,6 @@ export class AppComponent implements OnInit {
     this.service.getTableauCandy('sucettes');
     this.service.getTableauCandy('marshmallows');
     this.service.getTableauCandy('bonbons-gelifies');
-    this.service.getTableauCandy('meringues-fantaisie');
+    this.service.getTableauMerinques('meringues-fantaisie');
   }
 }
