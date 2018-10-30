@@ -1,8 +1,10 @@
 export class Bonbon {
     name: string;
     categorie: string;
-    constructor(name, categorie) {
+    collected: boolean;
+    constructor(name, categorie, collected) {
         this.name = name;
         this.categorie = categorie;
+        this.collected = collected;
     }
 }
