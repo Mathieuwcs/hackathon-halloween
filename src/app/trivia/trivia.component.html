@@ -32,9 +32,10 @@
           <td>
             <div class="conv-h-bloc-txt">
                 <p class="txt-habitant">Nom Habitant</p>
-                Siquis enim militarium vel honoratorum aut nobilis inter suos rumore
-                tenus esset insimulatus fovisse partes hostiles, iniecto onere catenarum in
-                modum beluae trahebatur.
+                
+
+                  <div [innerHtml]="trivias[0].question"></div>
+
             </div>
           </td>
           </tr>
@@ -47,9 +48,18 @@
           <td>
           <div class="conv-j-bloc-txt">
               <p class="txt-joueur">Nom Joueur</p>
-              Siquis enim militarium vel honoratorum aut nobilis inter suos rumore
-              tenus esset insimulatus fovisse partes hostiles, iniecto onere catenarum in
-              modum beluae trahebatur.
+              <form>
+                <ul>
+                  <td><input type="radio" value="correct_answer" name="list_name" >{{trivias[0].correct_answer}}</td><tr>
+                  <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers0 }}</td><tr>
+                  <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers1 }}</td><tr>
+                  <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers2 }}</td><tr>
+                </ul>
+              
+                <p>
+                  <button (click)="giveAnswer(value)">Answer !</button>
+                </p>
+              </form>
           </div>
           </td>
           <td>
