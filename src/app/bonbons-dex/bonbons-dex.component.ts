@@ -15,7 +15,6 @@ export class BonbonsDexComponent implements OnInit {
   ) { }
 
   tableauSucettes: Bonbon[];
-  // tableauBonbonsAuMiel: Bonbon[];
   tableauMarshmallows: Bonbon[];
   tableauBonbonsGelifies: Bonbon[];
   tableauMeringuesFantaisie: Bonbon[];
@@ -25,12 +24,4 @@ export class BonbonsDexComponent implements OnInit {
   ngOnInit() {
     this.bonbonsDex = this.service.getBonbonsDex();
   }
-
-  // onResponse() {
-  //   // this.bonbonsDex = this.tableauMarshmallows.concat(this.tableauSucettes, this.tableauBonbonsGelifies, this.tableauMeringuesFantaisie);
-  //   // const rnd = Math.floor(Math.random() * 5);
-  //   console.log(this.bonbonsDex);
-  //   // this.bonbonsDex.push(this.tableauBonbonsAuMiel[2]);
-  // }
-
 }
