@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { TriviaClass } from '../TriviaClass';
 
+
 @Component({
   selector: 'app-trivia',
   templateUrl: './trivia.component.html',
@@ -11,6 +12,9 @@ export class TriviaComponent implements OnInit {
 
 trivias:TriviaClass[];
 
+
+
+
   constructor (
     private ApiService: ApiService,
   ) { }
@@ -19,4 +23,12 @@ trivias:TriviaClass[];
     this.trivias = this.ApiService.getTrivia();
     console.log(this.trivias);
   }
-}
+  giveAnswer() {
+    if(this.trivias[0].correct_answer) {
+      console.log("Gagné");
+    } else {
+      console.log("Perdu");
+    }
+    }
+  }
+

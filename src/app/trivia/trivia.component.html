@@ -1,11 +1,18 @@
 <ng-container *ngFor="let trivia of trivias ">
 
-  <div><h4>{{ trivia.question }}</h4></div>
+  <div [innerHtml]="trivia.question"></div>
+  <form>
   <ul>
-    <td><input type="radio" name="radiogroup">{{ trivia.correct_answer }}</td><tr>
-    <td><input type="radio" name="radiogroup">{{ trivia.incorrect_answers0 }}</td><tr>
-    <td><input type="radio" name="radiogroup">{{ trivia.incorrect_answers1 }}</td><tr>
-    <td><input type="radio" name="radiogroup">{{ trivia.incorrect_answers2 }}</td><tr>
+    <td><input type="radio" value="correct_answer" name="list_name" [innerHtml]=trivia.correct_answer></td><tr>
+    <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivia.incorrect_answers0 }}</td><tr>
+    <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivia.incorrect_answers1 }}</td><tr>
+    <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivia.incorrect_answers2 }}</td><tr>
   </ul>
+
+  <p>
+    <button (click)="giveAnswer(value)">Answer !</button>
+  </p>
+</form>
 </ng-container>
+
 
