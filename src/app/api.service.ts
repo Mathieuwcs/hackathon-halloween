@@ -25,23 +25,27 @@ export class ApiService {
     .subscribe((data) => {
       const obj = data.products;
       // Boucle pour instancier les cinq premiers objet du JSON en classe Bonbon
-      for (let i = 0; i < obj.length; i++) {
+      for (let i = 0; i < 5; i++) {
         const unBonbon = new Bonbon(obj[i].product_name_fr, category );
         this.bonbonsDex.push(unBonbon);
         switch (category) {
           case 'sucettes':
             this.tableauSucettes.push(unBonbon);
+            break;
           case 'marshmallows':
             this.tableauMarshmallows.push(unBonbon);
+            break;
           case 'bonbons-gelifies':
             this.tableauBonbonsGelifies.push(unBonbon);
+            break;
           case 'meringues-fantaisie':
             this.tableauMeringuesFantaisie.push(unBonbon);
-        }   
+            break;
+        }
       }
-      while (this.bonbonsDex.length > 20) {
-        this.bonbonsDex.splice(Math.floor(Math.random() * this.bonbonsDex.length), 1);
-      };
+      // while (this.bonbonsDex.length > 20) {
+      //   this.bonbonsDex.splice(Math.floor(Math.random() * this.bonbonsDex.length), 1);
+      // }
     });
     console.log(this.bonbonsDex);
 
