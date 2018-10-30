@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from '../api.service';
+import { TriviaClass } from '../TriviaClass';
 
 @Component({
   selector: 'app-trivia',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TriviaComponent implements OnInit {
 
-  constructor() { }
+trivias:TriviaClass[];
+
+  constructor (
+    private ApiService: ApiService,
+  ) { }
 
   ngOnInit() {
+    this.trivias = this.ApiService.getTrivia();
+    console.log(this.trivias);
   }
-
 }
