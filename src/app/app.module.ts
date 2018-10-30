@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
 import { TriviaComponent } from './trivia/trivia.component';
 import { RecapComponent } from './recap/recap.component';
+import { BonbonsDexComponent } from './bonbons-dex/bonbons-dex.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'trivia', component: TriviaComponent },
   { path: 'recap', component: RecapComponent },
-]
+  { path: 'bonbonsdex', component: BonbonsDexComponent },
+];
 
 @NgModule({
   declarations: [
@@ -25,8 +27,8 @@ const appRoutes: Routes = [
     HomeComponent,
     MapComponent,
     TriviaComponent,
-    RecapComponent, 
-    
+    RecapComponent,
+    BonbonsDexComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
+    HttpClientModule,
   ],
   providers: [
     ApiService,
