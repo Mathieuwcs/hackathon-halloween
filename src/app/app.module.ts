@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   { path: 'trivia', component: TriviaComponent },
   { path: 'recap', component: RecapComponent },
   { path: 'bonbonsdex', component: BonbonsDexComponent },
-]
+];
 
 @NgModule({
   declarations: [
