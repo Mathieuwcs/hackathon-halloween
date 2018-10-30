@@ -15,12 +15,22 @@ export class BonbonsDexComponent implements OnInit {
   ) { }
 
   tableauSucettes: Bonbon[];
-  tableauBonbonsAuMiel: Bonbon[];
+  // tableauBonbonsAuMiel: Bonbon[];
+  tableauMarshmallows: Bonbon[];
+  tableauBonbonsGelifies: Bonbon[];
+  tableauMeringuesFantaisie: Bonbon[];
+
+  bonbonsDex: Bonbon[] = [];
 
   ngOnInit() {
-    this.tableauSucettes = this.service.getTableauCandy('sucettes');
-    this.tableauBonbonsAuMiel = this.service.getTableauCandy('bonbons-au-miel');
-    
+    this.bonbonsDex = this.service.getBonbonsDex();
   }
+
+  // onResponse() {
+  //   // this.bonbonsDex = this.tableauMarshmallows.concat(this.tableauSucettes, this.tableauBonbonsGelifies, this.tableauMeringuesFantaisie);
+  //   // const rnd = Math.floor(Math.random() * 5);
+  //   console.log(this.bonbonsDex);
+  //   // this.bonbonsDex.push(this.tableauBonbonsAuMiel[2]);
+  // }
 
 }

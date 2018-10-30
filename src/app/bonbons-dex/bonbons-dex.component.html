@@ -1,6 +1,24 @@
-<div *ngFor='let bonbon of tableauSucettes'>
-  <p>{{ bonbon | json }}</p>
+<!-- <div *ngFor='let bonbon of tableauSucettes'>
+  <p>{{ bonbon.name }}</p>
+</div> -->
+<!-- <button (click)='onResponse()'>Réponse juste</button> -->
+<!-- <div *ngFor='let bonbon of tableauBonbonsAuMiel'>
+  <p>{{ bonbon.name }}</p>
+</div> -->
+
+  <div class="container text-center">
+    <h1>Bonbondex</h1>
+    <div *ngIf="bonbonsDex.length != 0">
+      <div *ngFor='let bonbon of bonbonsDex'>
+        <div *ngIf='bonbon.categorie === "sucettes"'>
+          <div>
+            <p>{{ bonbon.name }} / {{ bonbon.categorie }}</p>
+          </div>
+        </div>
+    </div>
+
 </div>
-<div *ngFor='let bonbon of tableauBonbonsAuMiel'>
-    <p>{{ bonbon.name }}</p>
-  </div>
+
+
+  
+

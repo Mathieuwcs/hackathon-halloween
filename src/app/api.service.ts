@@ -9,17 +9,24 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getTableauCandy(category) {
-    const tableauBonbons: Bonbon[] = [];
+  bonbonsDex: Bonbon[] = [];
+
+  getBonbonsDex() {
+    return this.bonbonsDex;
+  }
+
+  getTableauCandy(category): void {
     // this.http.get<any>(`https://fr.openfoodfacts.org/categorie/sucettes/${Math.floor((Math.random() * 3) + 1)}.json`)
     this.http.get<any>(`https://fr.openfoodfacts.org/categorie/${category}/1.json`)
     .subscribe((data) => {
       const obj = data.products;
-      for (let element of obj) {
-        const unBonbon = new Bonbon(element.product_name_fr, category );
-        tableauBonbons.push(unBonbon);
+      // Boucle pour instancier les quatre premiers objet du JSON en classe Bonbon
+      for (let i = 0; i < 5; i++) {
+        const unBonbon = new Bonbon(obj[i].product_name_fr, category );
+        this.bonbonsDex.push(unBonbon);
       }
     });
-    return tableauBonbons;
+    console.log(this.bonbonsDex);
+
   }
 }
