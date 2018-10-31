@@ -1,8 +1,7 @@
 .bloc-recap {
-    width:500px;
-    height:auto;
+    width:100%;
     padding: 30px;
-    margin: 30px auto;
+    margin: 0 auto;
     font-size:14px;
     line-height: 1em;
     text-align: center;
