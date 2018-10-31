@@ -19,10 +19,10 @@ export class ApiService {
     '21H00',
     '21H30',
     '22H00',
-    '22H30',
-    '23H00',
-    '23H30',
-    '00H00'
+    '22H30'
+    // '23H00',
+    // '23H30',
+    // '00H00'
   ];
 
   constructor(private http: HttpClient) { }
@@ -73,7 +73,7 @@ export class ApiService {
 
   getTimer() {
   this.i++;
-  return this.timerHours[this.i];
+  return this.timerHours[this.i - 1];
 
 }
 

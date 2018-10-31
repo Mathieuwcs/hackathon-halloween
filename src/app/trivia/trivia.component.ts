@@ -13,8 +13,6 @@ import { Router } from '@angular/router';
 export class TriviaComponent implements OnInit {
 
 trivia: TriviaClass;
-i = 0;
-timer;
 
   constructor (
     private service: ApiService,
@@ -57,7 +55,7 @@ timer;
       this.service.tableauMeringuesFantaisie.filter(bonbon => !bonbon.collected)[0].collected = true;
       this.service.bonbonWinSwitch = true;
     }
-    alert(`You just won 3 candies!`)
+    alert(`You just won 3 candies!`);
   }
 
 
@@ -66,7 +64,7 @@ timer;
       console.log('Gagné');
       this.winBonbons();
     } else {
-      alert(`You just won a candy apple filled with razor blades!`)
+      alert(`You just won a candy apple filled with razor blades!`);
     }
     this.router.navigate(['/map']);
   }

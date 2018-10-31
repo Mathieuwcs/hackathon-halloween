@@ -15,7 +15,7 @@ export class MapComponent implements OnInit {
 
     this.timer = this.service.getTimer();
     console.log(this.timer);
-    if (this.timer === '00H00') {
+    if (this.timer === '22H30') {
       this.router.navigate(['/recap']);
       console.log('FIN DE LA PARTIE');
     }
