@@ -1,41 +1,80 @@
 
+/* la page */
 .general {
-    background-image: url('../../assets/fondmap.png');
-    display: block;
-    height:100vh;
-    background-position: top;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color:black;
+  background-color: black;
+  display: block;
+  margin:auto;
+  padding:10px;
 }
 
+/* Bloc qui contient le village et les maisons */
+.bloc-map {
+    background-image:url('../../assets/fondmap.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    min-height:700px;
+    margin-left:100px;
+    margin-right:100px;
+}
+
+.timer {
+  border:4px double black;
+  background-color: #424242;
+  border-radius:5px;
+  display:inline-block;
+  margin:20px;
+  position:absolute;
+  font-weight:600;
+  padding:5px;
+  color:white;
+  text-shadow: 1px 1px 0 black;
+}
+
+.logo-map {
+  margin:5px auto;
+  display: block;
+  display:flex;
+  justify-content: center;
+  padding-top:30px;
+}
+
+.cliclic {
+  display:block;
+  margin:auto;
+  text-align:center;
+  color:white;
+  font-family: 'Fontdiner Swanky', cursive;
+  font-size:1.3em;
+  text-shadow: 2px 2px 0 black;
+  margin-bottom: 100px;
+}
 
 /* LIGNE 1 */
 .row1 {
-    /* height:20%; */
-    display: flex;
-    justify-content: center;
-    padding-top:200px;
+  display: flex;
+  justify-content: center;
+  margin-bottom:-90px;
+  padding:3%;
 }
 
 .lesmaiz img{
-   width:100px;
-   margin-top:110px;
-   margin-left:-5%;
+   width:80px;
+   margin-top:150px;
    cursor: pointer;
 }
 
 /* LIGNE 2 */
 .row2 {
-    display: flex;
-    justify-content: center;
-    margin-top:10px;
+  display: flex;
+  justify-content: center;
+  margin-top:10px;
 }
 
 .lesmaiz2 img{
-   width:170px;
-   margin:5px;
+   width:100px;
+   /* margin:5px; */
    padding:10px;
    cursor: pointer;
-   
+
 }
