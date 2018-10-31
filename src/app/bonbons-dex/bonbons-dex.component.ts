@@ -19,10 +19,8 @@ export class BonbonsDexComponent implements OnInit {
   tableauBonbonsGelifies: Bonbon[] = [];
   tableauMeringuesFantaisie: Bonbon[] = [];
 
-  // bonbonsDex: Bonbon[] = [];
 
   ngOnInit() {
-    // this.bonbonsDex = this.service.getBonbonsDex();
     this.tableauSucettes = this.service.tableauSucettes;
     this.tableauMarshmallows = this.service.tableauMarshmallows;
     this.tableauBonbonsGelifies = this.service.tableauBonbonsGelifies;

@@ -20,7 +20,6 @@
           </tr>
         </table>
       </div>
-
       <div class="conv-habitant">
         <table>
           <tr>
@@ -31,17 +30,13 @@
           </td>
           <td>
             <div class="conv-h-bloc-txt">
-                <p class="txt-habitant">Nom Habitant</p>
-                
-
-                  <div [innerHtml]="trivias[0].question"></div>
-
+              <p class="txt-habitant">Nom Habitant</p>
+              <div [innerHtml]="trivias[0].question"></div>
             </div>
           </td>
           </tr>
         </table>
       </div>
-
       <div class="conv-joueur">
         <table>
           <tr>
@@ -50,12 +45,11 @@
               <p class="txt-joueur">Nom Joueur</p>
               <form>
                 <ul>
-                  <td><input type="radio" value="correct_answer" name="list_name" >{{trivias[0].correct_answer}}</td><tr>
+                  <td><input type="radio" value="correct_answer" name="list_name">{{ trivias[0].correct_answer }}</td><tr>
                   <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers0 }}</td><tr>
                   <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers1 }}</td><tr>
                   <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers2 }}</td><tr>
                 </ul>
-              
                 <p>
                   <button (click)="giveAnswer(value)">Answer !</button>
                 </p>
@@ -70,6 +64,5 @@
           </tr>
         </table>
       </div>
-
     </div>
   </div>
