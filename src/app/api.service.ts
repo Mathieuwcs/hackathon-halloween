@@ -42,7 +42,6 @@ export class ApiService {
       // Boucle pour instancier les cinq premiers objet du JSON en classe Bonbon
       for (let i = 0; i < 5; i++) {
         const unBonbon = new Bonbon(obj[i].product_name_fr, category, false );
-        // this.bonbonsDex.push(unBonbon);
         switch (category) {
           case 'sucettes':
             this.tableauSucettes.push(unBonbon);

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Bonbon } from './bonbon';
 import { ApiService } from './api.service';
 
 @Component({

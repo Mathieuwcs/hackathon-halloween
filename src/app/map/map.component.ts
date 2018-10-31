@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -9,18 +9,18 @@ import { ApiService } from '../api.service';
 })
 export class MapComponent implements OnInit {
  timer;
-  constructor(private ApiService: ApiService, private router : Router) { }
+  constructor(private service: ApiService, private router: Router) { }
 
   ngOnInit() {
-    this.timer=this.ApiService.getTimer();
+    this.timer = this.service.getTimer();
     console.log(this.timer);
-    if(this.timer=="00H00"){
+    if (this.timer === '00H00') {
       this.router.navigate(['/recap']);
-      console.log("FIN DE LA PARTIE")
+      console.log('FIN DE LA PARTIE');
     }
   }
 
-  changeRoute(){
+  changeRoute() {
     this.router.navigate(['/trivia']);
   }
 }
