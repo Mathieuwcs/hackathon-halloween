@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { TriviaClass } from '../TriviaClass';
 import { Router } from '@angular/router';
+import { Bonbon } from '../bonbon';
 
 
 
@@ -46,16 +47,35 @@ trivia: TriviaClass;
   }
 
   winBonbons() {
+    const bonbonsWon: Bonbon[] = [];
     if (this.service.bonbonWinSwitch) {
-      this.service.tableauSucettes.filter(bonbon => !bonbon.collected)[0].collected = true;
-      this.service.tableauMarshmallows.filter(bonbon => !bonbon.collected)[0].collected = true;
+      this.service.tableauSucettes.filter(bonbon => {
+        if (!bonbon.collected) {
+          bonbonsWon.push(bonbon);
+        }
+        return !bonbon.collected; })[0].collected = true;
+      this.service.tableauMarshmallows.filter(bonbon => {
+        if (!bonbon.collected) {
+          bonbonsWon.push(bonbon);
+        }
+        return !bonbon.collected; })[0].collected = true;
+      // bonbonsWon.push(this.service.tableauSucettes)
+
       this.service.bonbonWinSwitch = false;
     } else {
-      this.service.tableauBonbonsGelifies.filter(bonbon => !bonbon.collected)[0].collected = true;
-      this.service.tableauMeringuesFantaisie.filter(bonbon => !bonbon.collected)[0].collected = true;
+      this.service.tableauBonbonsGelifies.filter(bonbon => {
+        if (!bonbon.collected) {
+          bonbonsWon.push(bonbon);
+        }
+        return !bonbon.collected; })[0].collected = true;
+      this.service.tableauMeringuesFantaisie.filter(bonbon => {
+        if (!bonbon.collected) {
+          bonbonsWon.push(bonbon);
+        }
+        return !bonbon.collected; })[0].collected = true;
       this.service.bonbonWinSwitch = true;
     }
-    alert(`You just won 3 candies!`);
+    alert(`You're in for a treat! These are the candies you just won:\n - ${bonbonsWon[0].name} \n - ${bonbonsWon[1].name}`);
   }
 
 
@@ -68,7 +88,6 @@ trivia: TriviaClass;
     }
     this.router.navigate(['/map']);
   }
-
 }
 
 
