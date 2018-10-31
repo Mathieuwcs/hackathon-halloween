@@ -5,8 +5,6 @@ export class TriviaClass {
   question: string;
   answers: string[];
 
-  // Mettre les answers dans un tableau ? (!)
-
     constructor (
       category: string,
       type: string,

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { TriviaClass } from '../TriviaClass';
 import { Router } from '@angular/router';
+import { Bonbon } from '../bonbon';
 
 
 
@@ -13,8 +14,6 @@ import { Router } from '@angular/router';
 export class TriviaComponent implements OnInit {
 
 trivia: TriviaClass;
-i = 0;
-timer;
 
   constructor (
     private service: ApiService,
@@ -22,6 +21,8 @@ timer;
   ) { }
 
   ngOnInit() {
+    // tslint:disable-next-line:max-line-length
+    // AU DÉBUT JE VOULAIS FAIRE UN NGFOR SUR LE TABLEAU ANSWERS MAIS C'ÉTAIT TROP HORRIBLE POUR METTRE TOUT ÇA EN PAGE ET C'ÉTAIT TROP 4H DU MATIN
     this.service.getTrivia()
     .subscribe((reponse: any) => {
       const rawTrivia = reponse.results;
@@ -45,30 +46,48 @@ timer;
     });
   }
 
-    winBonbons() {
-      if (this.service.bonbonWinSwitch) {
-        this.service.tableauSucettes.filter(bonbon => !bonbon.collected)[0].collected = true;
-        this.service.tableauMarshmallows.filter(bonbon => !bonbon.collected)[0].collected = true;
-        this.service.bonbonWinSwitch = false;
-      } else {
-        this.service.tableauBonbonsGelifies.filter(bonbon => !bonbon.collected)[0].collected = true;
-        this.service.tableauMeringuesFantaisie.filter(bonbon => !bonbon.collected)[0].collected = true;
-        this.service.bonbonWinSwitch = true;
-      }
-    }
+  winBonbons() {
+    const bonbonsWon: Bonbon[] = [];
+    if (this.service.bonbonWinSwitch) {
+      this.service.tableauSucettes.filter(bonbon => {
+        if (!bonbon.collected) {
+          bonbonsWon.push(bonbon);
+        }
+        return !bonbon.collected; })[0].collected = true;
+      this.service.tableauMarshmallows.filter(bonbon => {
+        if (!bonbon.collected) {
+          bonbonsWon.push(bonbon);
+        }
+        return !bonbon.collected; })[0].collected = true;
+      // bonbonsWon.push(this.service.tableauSucettes)
 
-  
+      this.service.bonbonWinSwitch = false;
+    } else {
+      this.service.tableauBonbonsGelifies.filter(bonbon => {
+        if (!bonbon.collected) {
+          bonbonsWon.push(bonbon);
+        }
+        return !bonbon.collected; })[0].collected = true;
+      this.service.tableauMeringuesFantaisie.filter(bonbon => {
+        if (!bonbon.collected) {
+          bonbonsWon.push(bonbon);
+        }
+        return !bonbon.collected; })[0].collected = true;
+      this.service.bonbonWinSwitch = true;
+    }
+    alert(`You're in for a treat! These are the candies you just won:\n - ${bonbonsWon[0].name} \n - ${bonbonsWon[1].name}`);
+  }
+
+
   giveAnswer(param) {
     if (param === this.trivia.answers[0]) {
       console.log('Gagné');
       this.winBonbons();
     } else {
-      console.log('Perdu');
+      alert(`You just won a candy apple filled with razor blades!`);
     }
-
     this.router.navigate(['/map']);
   }
-
 }
 
 
