@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Bonbon } from '../bonbon';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class RecapComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
 
