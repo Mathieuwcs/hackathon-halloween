@@ -22,6 +22,7 @@ export class MapComponent implements OnInit {
   }
 
   changeRoute() {
+    this.service.changeNumberAdress();
     this.router.navigate(['/trivia']);
   }
 }
