@@ -30,3 +30,17 @@
     border-radius:5px;
     box-shadow:3px 3px 0px black;
   }
+
+  .button-home-play {
+    font-family: 'Fontdiner Swanky', cursive;
+    padding:5px;
+    color:white;
+    font-weight: 900;
+    text-shadow: 1px 1px 0px black;
+    background: #9900FF;
+    border-radius: 5px;
+    margin:auto;
+    width:100px;
+    display:flex;
+    justify-content: center;
+  }
