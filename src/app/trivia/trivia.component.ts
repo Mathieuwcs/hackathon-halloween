@@ -14,6 +14,10 @@ import { Bonbon } from '../bonbon';
 export class TriviaComponent implements OnInit {
 
 trivia: TriviaClass;
+latitude;
+longitude;
+adress;
+numberAdress;
 
   constructor (
     private service: ApiService,
@@ -23,6 +27,10 @@ trivia: TriviaClass;
   ngOnInit() {
     // tslint:disable-next-line:max-line-length
     // AU DÉBUT JE VOULAIS FAIRE UN NGFOR SUR LE TABLEAU ANSWERS MAIS C'ÉTAIT TROP HORRIBLE POUR METTRE TOUT ÇA EN PAGE ET C'ÉTAIT TROP 4H DU MATIN
+    navigator.geolocation.getCurrentPosition(this.laposition.bind(this));
+
+    this.numberAdress = this.service.getNumberAdress();
+    
     this.service.getTrivia()
     .subscribe((reponse: any) => {
       const rawTrivia = reponse.results;
@@ -88,6 +96,18 @@ trivia: TriviaClass;
       alert(`You just won a candy apple filled with razor blades!`);
     }
     this.router.navigate(['/map']);
+  }
+
+  laposition= (position) => {
+    this.latitude = position.coords.latitude;
+    this.longitude = position.coords.longitude;
+    console.log(this.latitude)
+    this.service.getAddress(this.latitude, this.longitude)
+    .subscribe(data =>{
+      this.adress = data.results[0].components.road
+      console.log(data)
+
+    });
   }
 }
 
