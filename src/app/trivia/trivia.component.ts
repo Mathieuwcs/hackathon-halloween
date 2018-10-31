@@ -43,6 +43,7 @@ timer;
           answerTable
         );
     });
+  }
 
     winBonbons() {
       if (this.service.bonbonWinSwitch) {
@@ -56,15 +57,11 @@ timer;
       }
     }
 
-  }
+  
   giveAnswer(param) {
     if (param === this.trivia.answers[0]) {
       console.log('Gagné');
       this.winBonbons();
-      console.log(this.service.tableauSucettes);
-      console.log(this.service.tableauMarshmallows);
-      console.log(this.service.tableauBonbonsGelifies);
-      console.log(this.service.tableauMeringuesFantaisie);
     } else {
       console.log('Perdu');
     }
