@@ -13,7 +13,7 @@ import { Bonbon } from '../bonbon';
 })
 export class TriviaComponent implements OnInit {
 
-trivia: TriviaClass;
+  trivia: TriviaClass;
 
   constructor (
     private service: ApiService,
@@ -44,8 +44,11 @@ trivia: TriviaClass;
           answerTable
         );
     });
+  
+    const myPix = ["./assets/adulte_1.png", "./assets/adulte_2.png", "./assets/adulte_3.png", "./assets/adulte_4.png"];
+    var randomNum = Math.floor(Math.random() * myPix.length);
+    document.getElementById("myPicture").setAttribute("src", myPix[randomNum]);
   }
-
   winBonbons() {
     const bonbonsWon: Bonbon[] = [];
     if (this.service.bonbonWinSwitch) {

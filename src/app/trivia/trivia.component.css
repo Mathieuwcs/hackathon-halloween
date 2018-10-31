@@ -89,7 +89,7 @@ ul, li {
   background: white;
   padding:5px;
   width:400px;
-  height: 90px;
+  height: 110px;
   color:black;
   font-size:0.9em;
   line-height: 1em;
@@ -100,8 +100,8 @@ ul, li {
 .conv-h-bloc-img {
   background: black;
   padding:5px;
-  width:100px;
-  height:100px;
+  /* width:100px;
+  height:100px; */
   border-radius: 100%;
 }
 
@@ -141,7 +141,7 @@ ul, li {
   background: white;
   padding:5px;
   width:400px;
-  height: 100px;
+  height: 105px;
   color:black;
   font-size:0.9em;
   line-height: 1em;
@@ -168,6 +168,16 @@ ul, li {
   background: black;
   padding:5px;
   width:100px;
-  height:100px;
+  /* height:100px; */
   border-radius: 100%;
+}
+
+.imgkid {
+  width: 90px;
+  height: auto;
+}
+
+.imgadult {
+  width: auto;
+  height: 110px;
 }
