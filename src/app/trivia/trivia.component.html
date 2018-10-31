@@ -1,4 +1,4 @@
-<div *ngIf="trivia">
+<div>
       <div class="general">
         <div class="logo-trivia">
           <img src="./assets/logo.png" alt="logo" width="200px" height="140ypx">
@@ -26,13 +26,13 @@
             <div class="row m-12">
               <div class="col-3">
                 <div class="conv-h-bloc-img">
-                  ICON HABITANT ICI.
+                  <img class="imgadult" alt="logo" id="myPicture"/>
                 </div>
               </div>
-              <div class="col-3">
+              <div *ngIf="trivia" class="col-3">
                 <div class="conv-h-bloc-txt">
                     <p class="txt-habitant">Nom Habitant</p>
-                        <div class="question" [innerHtml]="trivia.question"></div>
+                    <div class="question" [innerHtml]="trivia.question"></div>
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@
             <div class="row m-12">
               <div class="col-3">
                 <div class="conv-j-bloc-img">
-                  ICON JOUEUR ICI.
+                  <img class="imgkid" src="./assets/boy_1.png" alt="logo">
                 </div>
               </div>
           <div class="col-3">
