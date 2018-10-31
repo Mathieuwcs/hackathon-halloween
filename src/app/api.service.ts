@@ -34,6 +34,8 @@ export class ApiService {
 
   bonbonWinSwitch: Boolean = true;
 
+  bonbonCounter= 0;
+
 
   getTableauCandy(category) {
     this.http.get<any>(`https://fr.openfoodfacts.org/categorie/${category}/${Math.floor((Math.random() * 5) + 1)}.json`)
