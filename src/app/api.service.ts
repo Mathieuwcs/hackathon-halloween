@@ -27,8 +27,6 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  bonbonsDex: Bonbon[] = [];
-
   tableauSucettes: Bonbon[] = [];
   tableauMarshmallows: Bonbon[] = [];
   tableauBonbonsGelifies: Bonbon[] = [];
@@ -58,7 +56,6 @@ export class ApiService {
   }
 
   getTableauMerinques(category) {
-    'meringues-fantaisie'
     this.http.get<any>(`https://fr.openfoodfacts.org/categorie/${category}/1.json`)
     .subscribe((data) => {
       const obj = data.products;
@@ -78,28 +75,9 @@ export class ApiService {
 
 }
 
-getTrivia() {
-  const trivias: TriviaClass[] = [];
-
-  this.http.get<any>('https://opentdb.com/api.php?amount=1&category=9&difficulty=easy')
-    .subscribe((reponse: any) => {
-      const triviasTable = reponse.results;
-        for (const trivia of triviasTable) {
-          const unTrivia = new TriviaClass(
-            trivia.category,
-            trivia.type,
-            trivia.difficulty,
-            trivia.question,
-            trivia.correct_answer,
-            trivia.incorrect_answers[0],
-            trivia.incorrect_answers[1],
-            trivia.incorrect_answers[2],
-          );
-          trivias.push(unTrivia);
-        }
-    });
-  return trivias;
-}
+  getTrivia() {
+      return this.http.get<any>('https://opentdb.com/api.php?amount=1&category=9&difficulty=easy');
+  }
 
 }
 

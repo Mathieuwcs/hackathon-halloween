@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { TriviaClass } from '../TriviaClass';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 
 
@@ -12,29 +12,47 @@ import { Router } from "@angular/router";
 })
 export class TriviaComponent implements OnInit {
 
-trivias:TriviaClass[];
+trivia: TriviaClass;
 i = 0;
 timer;
 
-
-
-
   constructor (
-    private ApiService: ApiService,
-    private router : Router,
+    private service: ApiService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
-    this.trivias = this.ApiService.getTrivia();
-    console.log(this.trivias);
+    this.service.getTrivia()
+    .subscribe((reponse: any) => {
+      const rawTrivia = reponse.results;
+        const answerTable = [
+          rawTrivia[0].correct_answer,
+          rawTrivia[0].incorrect_answers[0],
+        ];
+        if (rawTrivia[0].incorrect_answers[1]) {
+          answerTable.push(rawTrivia[0].incorrect_answers[1]);
+        }
+        if (rawTrivia[0].incorrect_answers[2]) {
+          answerTable.push(rawTrivia[0].incorrect_answers[2]);
+        }
+        this.trivia = new TriviaClass(
+          rawTrivia[0].category,
+          rawTrivia[0].type,
+          rawTrivia[0].difficulty,
+          rawTrivia[0].question,
+          answerTable
+        );
+    });
+
   }
-  giveAnswer() {
-    if(this.trivias[0].correct_answer) {
-      console.log("Gagné");
+  giveAnswer(param) {
+    if (param === this.trivia.answers[0]) {
+      console.log('Gagné');
     } else {
-      console.log("Perdu");
+      console.log('Perdu');
     }
-    this.router.navigate(['/map'])
+
+    this.router.navigate(['/map']);
   }
-  
+
 }

@@ -10,14 +10,14 @@ ul, li {
 
 .buttonmaggle {
   font-family: 'Fontdiner Swanky', cursive;
-  padding:5px;
+  padding:10px;
   color:white;
   font-weight: 900;
   text-shadow: 1px 1px 0px black;
   background: #9900FF;
   border-radius: 5px;
   margin:auto;
-  width:50px;
+  width:auto;
   display:flex;
   justify-content: center;
 }
