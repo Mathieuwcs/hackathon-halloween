@@ -1,0 +1,15 @@
+.bloc-recap {
+    width:500px;
+    height:auto;
+    padding: 30px;
+    margin: 30px auto;
+    font-size:14px;
+    line-height: 1em;
+    text-align: center;
+    color:black;
+    text-shadow: 0 0 10px #000;
+    background: white;
+    opacity:0.8;
+    border-radius:5px;
+    box-shadow:3px 3px 0px black;
+  }

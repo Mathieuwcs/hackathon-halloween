@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ApiService } from './api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { BonbondexModal } from './modal-bonbondex';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -28,10 +31,12 @@ const appRoutes: Routes = [
     MapComponent,
     TriviaComponent,
     RecapComponent,
-    BonbonsDexComponent
+    BonbonsDexComponent,
+    BonbondexModal
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(
@@ -42,6 +47,6 @@ const appRoutes: Routes = [
   providers: [
     ApiService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, BonbonsDexComponent]
 })
 export class AppModule { }
