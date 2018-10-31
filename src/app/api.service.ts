@@ -21,8 +21,8 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAdress(lat,long) {
-    lat = this.lat;
-    lng = this.lng;
+    this.lat = lat;
+    this.lng = long;
     let adress = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=4e73016747394b95922ddd5fa3df9fb5`;
     return this.http.get<any>(adress)
   }
