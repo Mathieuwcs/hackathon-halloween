@@ -1,3 +1,14 @@
+
+.bonne-reponse {
+  color:#742375;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.mauvaise-reponse {
+  color:black;
+}
+
 p {
     font-size: 1.1em;
     text-shadow: 0px 0px 0px white;
@@ -12,6 +23,7 @@ h2 {
   font-size:1.1em;
   /* letter-spacing: 2px; */
   font-weight: 600;
+  border-bottom: 1px solid black;
 }
 
 h1 {

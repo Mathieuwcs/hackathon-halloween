@@ -4,13 +4,13 @@
     <div class="col-6">
       <h2>Marshmallows</h2>
       <div *ngFor='let bonbon of tableauMarshmallows'>
-        <p [ngClass]="{'text-success': bonbon.collected, 'text-danger': !bonbon.collected}">{{ bonbon.name }}</p>
+        <p [ngClass]="{'bonne-reponse': bonbon.collected, 'mauvaise-reponse': !bonbon.collected}">{{ bonbon.name }}</p>
       </div>
     </div>
     <div class="col-6">
       <h2>Meringues fantaisies</h2>
       <div *ngFor='let bonbon of tableauMeringuesFantaisie'>
-        <p [ngClass]="{'text-success': bonbon.collected, 'text-danger': !bonbon.collected}">{{ bonbon.name }}</p>
+        <p [ngClass]="{'bonne-reponse': bonbon.collected, 'mauvaise-reponse': !bonbon.collected}">{{ bonbon.name }}</p>
       </div>
     </div>
   </div>
@@ -18,13 +18,13 @@
     <div class="col-6">
       <h2>Sucettes</h2>
       <div *ngFor='let bonbon of tableauSucettes'>
-        <p [ngClass]="{'text-success': bonbon.collected, 'text-danger': !bonbon.collected}">{{ bonbon.name }} </p>
+        <p [ngClass]="{'bonne-reponse': bonbon.collected, 'mauvaise-reponse': !bonbon.collected}">{{ bonbon.name }} </p>
       </div>
     </div>
     <div class="col-6">
       <h2>Bonbons gélifiés</h2>
       <div *ngFor='let bonbon of tableauBonbonsGelifies'>
-        <p [ngClass]="{'text-success': bonbon.collected, 'text-danger': !bonbon.collected}">{{ bonbon.name }}</p>
+        <p [ngClass]="{'bonne-reponse': bonbon.collected, 'mauvaise-reponse': !bonbon.collected}">{{ bonbon.name }}</p>
       </div>
     </div>
   </div>

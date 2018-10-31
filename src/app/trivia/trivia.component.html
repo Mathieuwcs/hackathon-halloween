@@ -21,55 +21,57 @@
         </table>
       </div>
 
-      <div class="conv-habitant">
-        <table>
-          <tr>
-          <td>
+    <div class="conv-habitant">
+      <div class="container">
+        <div class="row m-12">
+          <div class="col-3">
             <div class="conv-h-bloc-img">
               ICON HABITANT ICI.
             </div>
-          </td>
-          <td>
+          </div>
+          <div class="col-3">
             <div class="conv-h-bloc-txt">
                 <p class="txt-habitant">Nom Habitant</p>
-                
+
 
                   <div [innerHtml]="trivias[0].question"></div>
 
             </div>
-          </td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="conv-joueur">
-        <table>
-          <tr>
-          <td>
-          <div class="conv-j-bloc-txt">
-              <p class="txt-joueur">Nom Joueur</p>
-              <form>
-                <ul>
-                  <td><input type="radio" value="correct_answer" name="list_name" >{{trivias[0].correct_answer}}</td><tr>
-                  <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers0 }}</td><tr>
-                  <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers1 }}</td><tr>
-                  <td><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers2 }}</td><tr>
-                </ul>
-              
-                <p>
-                  <button (click)="giveAnswer(value)">Answer !</button>
-                </p>
-              </form>
           </div>
-          </td>
-          <td>
-            <div class="conv-j-bloc-img">
-              ICON HABITANT ICI.
-            </div>
-          </td>
-          </tr>
-        </table>
+        </div>
       </div>
+    </div>
+
+
+    <div class="conv-joueur">
+      <div class="container">
+        <div class="row m-12">
+          <div class="col-3">
+            <div class="conv-j-bloc-img">
+              ICON JOUEUR ICI.
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="conv-j-bloc-txt">
+                <p class="txt-joueur">Nom Habitant</p>
+                <form>
+                  <ul>
+                    <li><input type="radio" value="correct_answer" name="list_name" >{{trivias[0].correct_answer}}</li>
+                    <li><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers0 }}</li>
+                    <li><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers1 }}</li>
+                    <li><input type="radio" value="incorrect_answers" name="list_name">{{ trivias[0].incorrect_answers2 }}</li>
+                  </ul>
+                  <p>
+                    <button (click)="giveAnswer(value)" class="buttonmaggle">Ok !</button>
+                  </p>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
     </div>
   </div>
