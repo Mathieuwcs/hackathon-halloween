@@ -102,7 +102,7 @@ numberAdress;
     this.latitude = position.coords.latitude;
     this.longitude = position.coords.longitude;
     console.log(this.latitude)
-    this.service.getAdress(this.latitude, this.longitude)
+    this.service.getAddress(this.latitude, this.longitude)
     .subscribe(data =>{
       this.adress = data.results[0].components.road
       console.log(data)
