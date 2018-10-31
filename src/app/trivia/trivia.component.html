@@ -1,4 +1,4 @@
-<div *ngIf="trivia">
+<div>
       <div class="general">
         <div class="logo-trivia">
           <img src="./assets/logo.png" alt="logo" width="200px" height="140ypx">
@@ -10,7 +10,7 @@
                 <td>
                   <div class="toto-bonbons">
                     <p>Total Bonbondex : {{ this.service.bonbonCounter }}</p>
-                    
+
                   </div>
                 </td>
                 <td>
@@ -26,13 +26,13 @@
             <div class="row m-12">
               <div class="col-3">
                 <div class="conv-h-bloc-img">
-                  ICON HABITANT ICI.
+                  <img class="imgadult" alt="logo" id="myPicture"/>
                 </div>
               </div>
-              <div class="col-3">
+              <div *ngIf="trivia" class="col-3">
                 <div class="conv-h-bloc-txt">
                     <p class="txt-habitant">Nom Habitant</p>
-                        <div class="question" [innerHtml]="trivia.question"></div>
+                    <div class="question" [innerHtml]="trivia.question"></div>
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@
             <div class="row m-12">
               <div class="col-3">
                 <div class="conv-j-bloc-img">
-                  ICON JOUEUR ICI.
+                  <img class="imgkid" src="./assets/boy_1.png" alt="logo">
                 </div>
               </div>
           <div class="col-3">
@@ -52,7 +52,7 @@
               <div *ngIf="trivia.answers.length == 2">
                 <div class="row">
                   <div class="col-6 mt-2">
-                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[0])'>{{ trivia.answers[0] }}</button>
+                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[0])'> {{ trivia.answers[0] }}</button>
                   </div>
                   <div class="col-6 mt-2">
                       <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[1])'>{{ trivia.answers[1] }}</button>
@@ -62,18 +62,18 @@
               <div *ngIf="trivia.answers.length == 4">
                 <div class="row">
                   <div class="col-6">
-                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[0])'>{{ trivia.answers[0] }}</button>
+                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[0])' [innerHtml]="trivia.answers[0]"></button>
                   </div>
                   <div class="col-6">
-                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[1])'>{{ trivia.answers[1] }}</button>
+                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[1])' [innerHtml]="trivia.answers[1]"></button>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
-                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[2])'>{{ trivia.answers[2] }}</button>
+                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[2])' [innerHtml]="trivia.answers[2]"></button>
                   </div>
                   <div class="col-6">
-                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[3])'>{{ trivia.answers[3] }}</button>
+                    <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[3])' [innerHtml]="trivia.answers[3]"></button>
                   </div>
                 </div>
               </div>

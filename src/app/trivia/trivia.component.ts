@@ -52,8 +52,11 @@ numberAdress;
           answerTable
         );
     });
+  
+    const myPix = ["./assets/adulte_1.png", "./assets/adulte_2.png", "./assets/adulte_3.png", "./assets/adulte_4.png"];
+    var randomNum = Math.floor(Math.random() * myPix.length);
+    document.getElementById("myPicture").setAttribute("src", myPix[randomNum]);
   }
-
   winBonbons() {
     this.service.bonbonCounter = this.service.bonbonCounter+ 2;
     const bonbonsWon: Bonbon[] = [];
