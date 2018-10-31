@@ -7,8 +7,9 @@ export class TriviaClass {
   incorrect_answers0: string;
   incorrect_answers1: string;
   incorrect_answers2: string;
-  
-  
+
+  // Mettre les answers dans un tableau ?
+
     constructor (
       category: string,
       type: string,
@@ -18,8 +19,7 @@ export class TriviaClass {
       incorrect_answers0: string,
       incorrect_answers1: string,
       incorrect_answers2: string,
-      ) 
-      {
+      ) {
       this.category = category;
       this.type = type;
       this.difficulty = difficulty;

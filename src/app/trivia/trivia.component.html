@@ -1,56 +1,50 @@
 
-  <div class="general">
-    <div class="logo-trivia">
-      <img src="./assets/logo.png" alt="logo" width="200px" height="140ypx">
-    </div>
-    <div class="bloc-trivia">
-      <div class="bar-info-perso">
-        <table>
-          <tr>
-            <td>
-              <div class="toto-bonbons">
-                Total Bonbons :
-              </div>
-            </td>
-            <td>
-              <div class="address-trivia">
-                Adresse :
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-
-    <div class="conv-habitant">
-      <div class="container">
-        <div class="row m-12">
-          <div class="col-3">
-            <div class="conv-h-bloc-img">
-              ICON HABITANT ICI.
-            </div>
+      <div class="general">
+        <div class="logo-trivia">
+          <img src="./assets/logo.png" alt="logo" width="200px" height="140ypx">
+        </div>
+        <div class="bloc-trivia">
+          <div class="bar-info-perso">
+            <table>
+              <tr>
+                <td>
+                  <div class="toto-bonbons">
+                    Total Bonbons :
+                  </div>
+                </td>
+                <td>
+                  <div class="address-trivia">
+                    Adresse :
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
-          <div class="col-3">
-            <div class="conv-h-bloc-txt">
-                <p class="txt-habitant">Nom Habitant</p>
-
-
-                  <div [innerHtml]="trivias[0].question"></div>
-
+        <div class="conv-habitant">
+          <div class="container">
+            <div class="row m-12">
+              <div class="col-3">
+                <div class="conv-h-bloc-img">
+                  ICON HABITANT ICI.
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="conv-h-bloc-txt">
+                    <p class="txt-habitant">Nom Habitant</p>
+                      <div [innerHtml]="trivias[0].question"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-
-    <div class="conv-joueur">
-      <div class="container">
-        <div class="row m-12">
-          <div class="col-3">
-            <div class="conv-j-bloc-img">
-              ICON JOUEUR ICI.
-            </div>
-          </div>
+        <div class="conv-joueur">
+          <div class="container">
+            <div class="row m-12">
+              <div class="col-3">
+                <div class="conv-j-bloc-img">
+                  ICON JOUEUR ICI.
+                </div>
+              </div>
           <div class="col-3">
             <div class="conv-j-bloc-txt">
                 <p class="txt-joueur">Nom Habitant</p>
@@ -70,8 +64,5 @@
         </div>
       </div>
     </div>
-
-
-
     </div>
   </div>
