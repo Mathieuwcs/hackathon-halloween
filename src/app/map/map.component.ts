@@ -12,6 +12,7 @@ export class MapComponent implements OnInit {
   constructor(private service: ApiService, private router: Router) { }
 
   ngOnInit() {
+
     this.timer = this.service.getTimer();
     console.log(this.timer);
     if (this.timer === '00H00') {

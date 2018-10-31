@@ -43,11 +43,25 @@ timer;
           answerTable
         );
     });
-
   }
+
+    winBonbons() {
+      if (this.service.bonbonWinSwitch) {
+        this.service.tableauSucettes.filter(bonbon => !bonbon.collected)[0].collected = true;
+        this.service.tableauMarshmallows.filter(bonbon => !bonbon.collected)[0].collected = true;
+        this.service.bonbonWinSwitch = false;
+      } else {
+        this.service.tableauBonbonsGelifies.filter(bonbon => !bonbon.collected)[0].collected = true;
+        this.service.tableauMeringuesFantaisie.filter(bonbon => !bonbon.collected)[0].collected = true;
+        this.service.bonbonWinSwitch = true;
+      }
+    }
+
+  
   giveAnswer(param) {
     if (param === this.trivia.answers[0]) {
       console.log('Gagné');
+      this.winBonbons();
     } else {
       console.log('Perdu');
     }
@@ -56,3 +70,6 @@ timer;
   }
 
 }
+
+
+
