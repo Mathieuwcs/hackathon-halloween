@@ -4,6 +4,24 @@
   height:100vh;
 }
 
+ul, li {
+  list-style-type: none;
+}
+
+.buttonmaggle {
+  font-family: 'Fontdiner Swanky', cursive;
+  padding:5px;
+  color:white;
+  font-weight: 900;
+  text-shadow: 1px 1px 0px black;
+  background: #9900FF;
+  border-radius: 5px;
+  margin:auto;
+  width:50px;
+  display:flex;
+  justify-content: center;
+}
+
 .bloc-trivia {
   background: grey;
   width:900px;
@@ -117,7 +135,7 @@
   background: white;
   padding:5px;
   width:400px;
-  height: 90px;
+  height: 100px;
   color:black;
   font-size:0.9em;
   line-height: 1em;
