@@ -31,7 +31,7 @@
               <div class="col-3">
                 <div class="conv-h-bloc-txt">
                     <p class="txt-habitant">Nom Habitant</p>
-                        <div [innerHtml]="trivia.question"></div>
+                        <div class="question" [innerHtml]="trivia.question"></div>
                 </div>
               </div>
             </div>
@@ -50,10 +50,10 @@
               <p class="txt-joueur">Nom Habitant</p>
               <div *ngIf="trivia.answers.length == 2">
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-6 mt-2">
                     <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[0])'>{{ trivia.answers[0] }}</button>
                   </div>
-                  <div class="col-6">
+                  <div class="col-6 mt-2">
                       <button class="buttonmaggle" (click)='giveAnswer(trivia.answers[1])'>{{ trivia.answers[1] }}</button>
                     </div>
                 </div>
