@@ -37,6 +37,8 @@ export class ApiService {
 
   bonbonWinSwitch: Boolean = true;
 
+  bonbonCounter= 0;
+
 
   getTableauCandy(category) {
     this.http.get<any>(`https://fr.openfoodfacts.org/categorie/${category}/${Math.floor((Math.random() * 5) + 1)}.json`)
@@ -84,11 +86,11 @@ export class ApiService {
       return this.http.get<any>('https://opentdb.com/api.php?amount=1&category=9&difficulty=easy');
   }
 
-  getAdress(lat,long) {
+  getAddress(lat, long) {
     this.lat = lat;
     this.lng = long;
-    let adress = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=4e73016747394b95922ddd5fa3df9fb5`;
-    return this.http.get<any>(adress)
+    const address = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=4e73016747394b95922ddd5fa3df9fb5`;
+    return this.http.get<any>(address);
   }
 
   changeNumberAdress(){
