@@ -44,8 +44,9 @@
   color:white;
   font-weight: 900;
   text-shadow: 1px 1px 0px black;
-  background: #9900FF;
+  background: #4F266A;
   border-radius: 5px;
+  border:4px double black;
   margin:auto;
   width:100px;
   display:flex;

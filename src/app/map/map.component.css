@@ -1,18 +1,38 @@
 
-.container-fluid {
-    background:black;
+.general {
+    background-image: url('../../assets/fondmap.png');
     display: block;
     height:100vh;
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color:black;
 }
 
-.row {
-    height:33%;
+
+/* LIGNE 1 */
+.row1 {
+    /* height:20%; */
+    display: flex;
+    justify-content: center;
+    padding-top:200px;
 }
 
-img {
-    width:100%;
+.lesmaiz img{
+   width:100px;
+   margin-top:110px;
+   margin-left:-5%;
 }
 
-img:hover {
- cursor: pointer;
+/* LIGNE 2 */
+.row2 {
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
+}
+
+.lesmaiz2 img{
+   width:170px;
+   margin:5px;
+   padding:10px;
 }
