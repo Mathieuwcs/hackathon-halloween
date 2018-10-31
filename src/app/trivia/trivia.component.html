@@ -10,7 +10,6 @@
                 <td>
                   <div class="toto-bonbons">
                     <p>Total Bonbondex : {{ this.service.bonbonCounter }}</p>
-
                   </div>
                 </td>
                 <td>
@@ -31,7 +30,7 @@
               </div>
               <div *ngIf="trivia" class="col-3">
                 <div class="conv-h-bloc-txt">
-                    <p class="txt-habitant">Nom Habitant</p>
+                    <p class="txt-habitant">Creepy Neighbor</p>
                     <div class="question" [innerHtml]="trivia.question"></div>
                 </div>
               </div>
@@ -48,7 +47,7 @@
               </div>
           <div class="col-3">
             <div class="conv-j-bloc-txt">
-              <p class="txt-joueur">Nom Habitant</p>
+              <p class="txt-joueur">Frankenkid</p>
               <div *ngIf="trivia.answers.length == 2">
                 <div class="row">
                   <div class="col-6 mt-2">

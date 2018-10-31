@@ -37,7 +37,7 @@ export class ApiService {
 
   bonbonWinSwitch: Boolean = true;
 
-  bonbonCounter= 0;
+  bonbonCounter = 0;
 
 
   getTableauCandy(category) {
@@ -93,18 +93,12 @@ export class ApiService {
     return this.http.get<any>(address);
   }
 
-  changeNumberAdress(){
-    this.numAdress = this.numAdress+2;
+  changeNumberAdress() {
+    this.numAdress = this.numAdress + 2;
   }
 
-  getNumberAdress(){
+  getNumberAdress() {
     return this.numAdress;
   }
 
 }
-
-
-
-
-
-
