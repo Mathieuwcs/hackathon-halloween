@@ -7,6 +7,8 @@ import { Bonbon } from './bonbon';
   providedIn: 'root'
 })
 export class ApiService {
+  lat: number;
+  lng: number;
   i = 0;
   timerHours = [
     '17H00',
@@ -81,6 +83,13 @@ export class ApiService {
 
   getTrivia() {
       return this.http.get<any>('https://opentdb.com/api.php?amount=1&category=9&difficulty=easy');
+  }
+
+  getAdress(lat,long) {
+    this.lat = lat;
+    this.lng = long;
+    let adress = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=4e73016747394b95922ddd5fa3df9fb5`;
+    return this.http.get<any>(adress)
   }
 
 }
