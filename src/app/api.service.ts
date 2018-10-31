@@ -34,6 +34,8 @@ export class ApiService {
   tableauBonbonsGelifies: Bonbon[] = [];
   tableauMeringuesFantaisie: Bonbon[] = [];
 
+  bonbonWinSwitch: Boolean = true;
+
 
   getTableauCandy(category) {
     this.http.get<any>(`https://fr.openfoodfacts.org/categorie/${category}/${Math.floor((Math.random() * 5) + 1)}.json`)

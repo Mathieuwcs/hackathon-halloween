@@ -20,17 +20,37 @@ timer;
 
 
   constructor (
-    private ApiService: ApiService,
+    private service: ApiService,
     private router : Router,
   ) { }
 
   ngOnInit() {
-    this.trivias = this.ApiService.getTrivia();
+    this.trivias = this.service.getTrivia();
     console.log(this.trivias);
   }
+  
+  
+
+  winBonbons() {
+    if (this.service.bonbonWinSwitch) {
+      this.service.tableauSucettes.filter(bonbon => !bonbon.collected)[0].collected = true;
+      this.service.tableauMarshmallows.filter(bonbon => !bonbon.collected)[0].collected = true;
+      this.service.bonbonWinSwitch = false;
+    } else {
+      this.service.tableauBonbonsGelifies.filter(bonbon => !bonbon.collected)[0].collected = true;
+      this.service.tableauMeringuesFantaisie.filter(bonbon => !bonbon.collected)[0].collected = true;
+      this.service.bonbonWinSwitch = true;
+    }
+  }
+  
   giveAnswer() {
     if(this.trivias[0].correct_answer) {
-      console.log("Gagné");
+      
+      this.winBonbons();
+      console.log(this.service.tableauSucettes);
+      console.log(this.service.tableauMarshmallows);
+      console.log(this.service.tableauBonbonsGelifies);
+      console.log(this.service.tableauMeringuesFantaisie);
     } else {
       console.log("Perdu");
     }
@@ -38,3 +58,6 @@ timer;
   }
   
 }
+
+
+
