@@ -172,3 +172,13 @@ ul, li {
   height:100px;
   border-radius: 100%;
 }
+
+.imgkid {
+width: 90px;
+height: auto;
+}
+
+.imgadult {
+width: auto;
+height: 110px;
+}
