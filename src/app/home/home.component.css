@@ -52,3 +52,9 @@
   display:flex;
   justify-content: center;
 }
+
+.address, .collection {
+  font-style: italic;
+  font-style: bold;
+  color: #9900FF;
+}

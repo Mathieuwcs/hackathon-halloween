@@ -7,7 +7,10 @@ import { Bonbon } from './bonbon';
   providedIn: 'root'
 })
 export class ApiService {
+  lat: number;
+  lng: number;
   i = 0;
+  numAdress = 1;
   timerHours = [
     '17H00',
     '17H30',
@@ -33,6 +36,8 @@ export class ApiService {
   tableauMeringuesFantaisie: Bonbon[] = [];
 
   bonbonWinSwitch: Boolean = true;
+
+  bonbonCounter= 0;
 
 
   getTableauCandy(category) {
@@ -79,6 +84,21 @@ export class ApiService {
 
   getTrivia() {
       return this.http.get<any>('https://opentdb.com/api.php?amount=1&category=9&difficulty=easy');
+  }
+
+  getAddress(lat, long) {
+    this.lat = lat;
+    this.lng = long;
+    const address = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=4e73016747394b95922ddd5fa3df9fb5`;
+    return this.http.get<any>(address);
+  }
+
+  changeNumberAdress(){
+    this.numAdress = this.numAdress+2;
+  }
+
+  getNumberAdress(){
+    return this.numAdress;
   }
 
 }
