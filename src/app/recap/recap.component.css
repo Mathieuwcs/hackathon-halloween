@@ -40,7 +40,7 @@
     background: #9900FF;
     border-radius: 5px;
     margin:auto;
-    width:100px;
+    width:auto;
     display:flex;
     justify-content: center;
   }
