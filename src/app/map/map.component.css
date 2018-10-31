@@ -1,0 +1,18 @@
+
+.general {
+    background:black;
+    display: block;
+    height:100vh;
+}
+
+.row {
+    height:33%;
+}
+
+img {
+    width:100%;
+}
+
+img:hover {
+ cursor: pointer;
+}
