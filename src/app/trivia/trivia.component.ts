@@ -47,6 +47,7 @@ trivia: TriviaClass;
   }
 
   winBonbons() {
+    this.service.bonbonCounter = this.service.bonbonCounter+ 2;
     const bonbonsWon: Bonbon[] = [];
     if (this.service.bonbonWinSwitch) {
       this.service.tableauSucettes.filter(bonbon => {
